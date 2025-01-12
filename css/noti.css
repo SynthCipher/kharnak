@@ -1,0 +1,89 @@
+ /* General styles for the notification bar */
+#hellobar-bar {
+    position: fixed;
+    /* top: 70px; */
+    bottom: 0;
+    left: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #333;  /* Dark background */
+    color: white;
+    opacity: 0.9;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    z-index: 1000;  /* Make sure it's always on top */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Headline wrapper */
+#hellobar-bar .hb-headline-wrapper p {
+    margin: 0;
+    font-size: 14px;
+    padding-left: 60px;
+}
+
+#hellobar-bar .hb-headline-wrapper a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hellobar-bar .hb-headline-wrapper a:hover {
+    text-decoration: underline;
+}
+
+/* Close button wrapper */
+#hellobar-bar .hb-close-wrapper {
+    margin-right: 60px;
+    
+}
+
+/* Close button style */
+#hellobar-bar .icon-close {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#hellobar-bar .icon-close:hover {
+    opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    #hellobar-bar {
+     
+        padding: 10px;
+        font-size: 14px;
+      
+        margin-bottom: 40px;
+     
+   
+
+   
+
+    }
+
+    #hellobar-bar .hb-headline-wrapper p {
+        font-size: 15px;
+        padding-left: 0px;
+    }
+
+    #hellobar-bar .hb-headline-wrapper a {
+        font-size: 16px;
+        text-decoration: underline;
+    }
+
+    #hellobar-bar .icon-close {
+        font-size: 18px;
+    }
+    #hellobar-bar .hb-close-wrapper {
+        margin-right: 12px;
+        
+        
+    }
+}

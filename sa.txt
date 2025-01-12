@@ -1,0 +1,163 @@
+  མཁར་ནག་ཡར་རྒྱས་ཚོགས་པ་
+  
+  
+  
+  
+  
+  <section id="paragraph" class="wrapper paragraph-wrapper">
+      <div class="GrievanceForm">
+         <form action="https://api.web3forms.com/submit" id="grievance" method="POST" onsubmit="return handleSubmit(event);">
+             <!-- <fieldset> -->
+ 
+                
+                     <label for="NAME" class="label1">Your Name (required) : </label>
+                     <input type="text" class="label1 id="NAME" name="NAME" required>
+ 
+                     <label for="GENDER" class="label1">Your Gender </label>    
+                     <select id="GENDER" name="GENDER" class="label1">
+                         <option value="">Select</option>
+                         <option value="MALE">MALE</option>
+                         <option value="FEMALE">FEMALE</option>
+                         <option value="OTHER">OTHER</option>
+                     </select>
+ 
+                     <label for="RESIDENCE" class="label1">Place of residence(required) </label>
+                     <input type="text" name="RESIDENCE" id="RESIDENCE" class="label1" required>
+ 
+                     <label for="DISTRICT" class="label1">District (required)</label>
+                     <select  id="DISTRICT" name="DISTRICT" class="label1" required>
+                         <option value="">Select</option>
+                         <option value="LEH">Leh</option>
+                         <option value="KARGIL">Kargil</option>
+                         <option value="OTHER STATE">Other State</option>
+                     </select>
+ 
+                     <label for="MOBILENUMBER" class="label1">Your Mobile Number(required)</label>
+                     <input type="tel" id="MOBILENUMBER" name="MOBILENUMBER" class="label1" required>
+ 
+                     <label for="EMAIL" class="label1">Yourr Email (required)</label>
+                     <input type="email" id="EMAIL" name="EMAIL" class="label1" required>
+                 </fieldset>
+ 
+                 <fieldset >
+                     <legend class="label1"><h3 class="h3legend">  &nbsp; Grievance Details &nbsp;</h3></legend>
+                     <!-- <input type="hidden" name="access_key" value="403a4651-4929-4c44-85b6-37f6aa2a2f34"> -->
+ 
+                     <label for="SUBJECT" class="label1">Subject of Grievance (required)</label>
+                     <input type="text" id="SUBJECT" name="SUBJECT" class="label1" required>
+                     
+                     <label for="DESCRIPTION" class="label1"> Description of Greivance(required)</label>
+                     <textarea rows="4" id="DESCRIPTION" name="DESCRIPTION" class="label1" required></textarea>
+                 </fieldset>
+          
+                 
+                 <div class="button-container">
+                     <input type="submit" id="submit" value="Send">
+                     <!-- <button type="submit" id="submit">Submit Form</button> -->
+                 </div>
+ 
+         </form>
+     </div>
+
+
+
+     
+.GrievanceForm {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: #868686;
+    border-style: solid;
+    margin: 2% 8% ;
+    margin-top: 0;
+    padding-top: 3%;
+}
+
+.grievanceHead{
+    padding-left: 5%;
+    /* text-decoration: underline; */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+/* input, */
+select,
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"]
+ {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e9242;
+}
+button[type="submit"]
+ {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e9242;
+}
+
+
+.label1{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+fieldset{
+    margin: 5%;
+    margin-top: 2%;
+}
+
+.h3legend{
+    font-weight: bold;
+}
+
+#recaptcha{
+    display: flex;
+    /* align-items:center ; */
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .GrievanceForm {
+        margin: 2% 2% ;
+      
+    }
+   
+  }

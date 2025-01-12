@@ -1,0 +1,172 @@
+/* .tourist-section, .researcher-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form label {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.contact form input, .contact form select, .contact form textarea {
+    padding: 10px;
+    margin: 8px 0;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid #9b59b6; 
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.contact form input:focus, .contact form select:focus, .contact form textarea:focus {
+    border-color: #8e44ad; 
+    outline: none;
+}
+
+.contact form button {
+    background-color: #2a8fbd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.contact form button:hover {
+    background-color: #217fa0;
+}
+
+@media (min-width: 768px) {
+    .contact form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+        align-items: start; 
+    }
+
+    .contact form label, .contact form input, .contact form select, .contact form textarea { 
+    }
+
+    .contact form button {
+        grid-column: span 2; 
+        width: auto;  
+        margin-top: 20px;
+    }
+}
+ */
+
+
+
+
+    
+.GrievanceForm {
+    padding: 20px;
+    border-radius: 8px;
+    border:  solid #1e1964;
+    /* border-style: solid; */
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+   
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    padding-left: 5px ;
+    margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+/* input, */
+select,
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #E9F9FF;
+    border: 1.2px solid #1e1964;
+    border-radius: 4px;
+}
+
+input[type="submit"]
+ {
+    /* background-color: #4CAF50; */
+    background-color: #E9F9FF;
+    color: #1e1964;
+    padding: 8px 25px;
+    border: none;
+    border: 1px solid #1e1964;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e9242;
+    background-color: #1e1964;
+    color: white;
+}
+
+
+
+.GrievanceForm .label1{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    align-items: start;
+    
+}
+
+
+
+.h3legend{
+    font-weight: bold;
+}
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  @media only screen and (max-width: 700px) {
+    .GrievanceForm {
+        /* margin: 2% 2% ; */
+        padding: 20px 10px;
+
+      
+    }
+    input[type="text"],
+input[type="tel"],
+input[type="email"],
+/* input, */
+select,
+textarea {
+    width: 96%;
+    
+}
+.GrievanceForm .label1{
+    margin-left: 2%;
+    margin-right: 2%;
+ 
+    
+}
+
+
+   
+  }

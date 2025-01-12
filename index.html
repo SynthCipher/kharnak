@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom Css -->
+         <!-- <link rel="stylesheet" href="./video.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+     <link rel="stylesheet" href="css/video.css">
+     <link rel="stylesheet" href="css/timeline.css">
+     <link rel="stylesheet" href="css/map.css">
+     <link rel="stylesheet" href="css/inputContact.css">
+     <link rel="stylesheet" href="css/popup.css">
+     <link rel="stylesheet" href="css/slider.css">
+     <link rel="stylesheet" href="css/noti.css">
+
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="brand">
+            <a href="#Home"><img src="./img/logo1-removebg-preview.png" alt="" class="logo"></a> 
+        </div>
+
+        <div class="nav-list">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Timeline">Nomadism</a></li>
+                <li><a href="#Journal">Journal</a></li>
+                <li><a href="#Groups">Groups</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <ul>
+                <li><a href="https://www.instagram.com/kharnak_junu_tsogspa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.instagram.com/kharnak_junu_tsogspa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/kharnak_junu_tsogspa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa fa-youtube"></i></a></li>
+            </ul>
+        </div>
+     
+    </nav>
+
+    <div class="toggle-btn">
+        <i class="fa fa-bars"></i>
+    </div>
+    <div class="bar-line"></div>
+
+    <!-- HOME Video -->
+    <div class="hero" id="Home">
+        <video autoplay loop muted plays-inline class="back-video" >
+            <source src="./img/Timeline 1.mp4" type="video/mp4">
+        </video> 
+        <div class="content">
+            <h1>Kharnak</h1>
+            <a href="#Kharnak">EXPLORE</a>
+        </div>
+    </div>
+ 
+    <!-- Skills -->
+    <section class="skills container" id="Kharnak">
+        <div class="title">
+            <h3>"BLACK CASTLE"</h3>
+            <!-- <h3 style="font-size: 35px;">མཁར་ནག་</h3> -->
+            <!-- <h1>BLACK CASTLE</h1> -->
+            <h1 class="heading-Kharnak">མཁར་ནག་</h1>
+
+
+            <h3 class="h3-Kharnak">Refers to a  ruined fort located on a high spur above one of the nomad’s encampments. </h3>
+        </div>
+        <div class="grid-wrapper">
+            
+            
+            <div class="grid-box">
+                <div class="icon-title">
+                    <img class="img-1" src="./img/historylogo (2).png" alt="">
+                    <h2>དད་དགོན་པ་། <br>DHAT GONPA <br></h2>
+                </div>
+                <p> The<span class="highlight"> Kharnakpa</span> community is entirely Buddhist, following the ‘Drukpa Kargyu Lineage'. The only monastery in the Kharnak region, Ldad dgon pa, is affiliated with Hemis Monastery as a branch (Hemis dgon lag). 
+                    
+                    <button class="Read-more " onclick="togglePopup1()">Read More <i class="fa fa-arrow-right"></i></button>
+                </p>
+
+
+                <!-- <button onclick="togglePopup()">Read More</button> -->
+                <!-- Popup HTML structure -->
+                <div class="popup" id="popup-1">
+                
+                    <div class="overlay"></div>
+                
+                    <div class="close-btn" onclick="togglePopup1()">&times;</div>
+                    <div class="content">
+                        
+                        <!-- Close button at the top -->           
+                        <h1>DHAT MONASTERY</h1>
+                        <h2>Kharnak Community and Religious Affiliation</h2>
+                        <p>The Kharnak-pa community is entirely Buddhist, following the ‘Brug pa bKa’ brgyud pa order. The only monastery in the Kharnak region, Ldad dgon pa, is affiliated with Hemis Monastery as a branch (Hemis dgon lag). The Kharnak community includes a significant number of celibate nuns and priests. The nuns live either with their families or in a hermitage known as mTshams khang, located at Yagang (4500m), while the priests, referred to as ‘lamas’, are mostly married and live the life of householders.
+                        </p>
+                        <!-- <img src="img/kharnak-gonpa.png" alt=""> -->
+                        <div class="container-swiper">
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide"><img id="slide-1" src="img/kharnakGonpa1.jpg" alt="old kharnak gonpa"></div>
+                                <div class="swiper-slide"> <img id="slide-2" src="img/kharnakGonpa4.jpg" alt="the mask of ka la bu kyong"></div>
+                                <div class="swiper-slide"> <img id="slide-2" src="img/kharnakGonpa2.jpg" alt="the mask of ka la bu kyong"></div>
+                                <div class="swiper-slide"> <img id="slide-2" src="img/kharnakGonpa5.jpg" alt="the mask of ka la bu kyong"></div>
+                                <div class="swiper-slide"><img id="slide-1" src="img/kharnakGonpa3.jpg" alt="old kharnak gonpa"></div>
+                                
+                                <div class="swiper-slide"> <img id="slide-2" src="img/kharnakGonpa7.jpg" alt="the mask of ka la bu kyong"></div>
+                                <!-- <div class="swiper-slide"><img src="img/alzejar.png" alt=""></div> -->                  
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>                
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                    
+                        </div>
+
+                        <h2>Role of the Lamas</h2>
+                        <p>The lamas in Kharnak are grong pa’i grwa pa (household priests), and while they do not slaughter animals, they engage in 
+                            activities like tanning, moxibustion to treat weak horses, and even ploughing if they own arable land. 
+                            Their traditional attire consists of the nomadic log pa gon chas—a long-sleeved, belted robe 
+                            with fleece facing inside. Lamas in Kharnak, though technically belonging to Hemis Monastery, 
+                            generally remain local and are trained by senior monks or nuns. They are not assigned to village 
+                            temples to serve the laity as is the norm in other parts of Ladakh.</p>
+
+                        <h2>Dhad Gompa’s Founding</h2>
+                        <p>The exact date of the founding of Dhad Gompa remains unclear, but it is 
+                            believed to have been established around the early 18th century, roughly the same time as 
+                            Hemis Monastery. It was founded by a native lama from Kharnak on a site blessed by Rin 
+                            chen bZang po (958-1055), a revered figure known as the “Great Translator.” Although no formal 
+                            historical records are available, 
+                            local tradition suggests that Dhad Gompa is over 350 years old</p>
+                        <p>In the early days, Dhad Gompa was supported by 16 households from the Kharnak region, 
+                            with each family contributing in various ways based on their skills. Families with 
+                            expertise in wall painting created religious murals depicting Buddhist figures, 
+                            historical events, and cultural narratives. Those skilled in carpentry helped with 
+                            the construction and maintenance of the monastery’s structures. This collaborative effort, 
+                            where each family member contributed according to their abilities, ensured the Gompa’s upkeep 
+                            and spiritual significance. The contributions of these 16 households were documented in a list 
+                            known as Par-chud 16, held by Hemis Monastery. Each family also kept a copy of this document, 
+                            traditionally stored in white cloth and passed down through generations.</p>
+                            <img src="img/kharnak-gonpa.png" class="pop-img" alt="">
+
+                            <p>
+                                Dhad Gompa holds a central place in the religious practices of the Kharnak Changpas. 
+                                Two Changpas are selected to travel to the Gompa daily, year-round, to offer prayers to one 
+                                of the most revered gods of the region. This daily commitment is vital for maintaining the 
+                                religious traditions of the Kharnak people. During the winter, when most of the village 
+                                migrates with livestock, the two lamas remain the only inhabitants of the Gompa, 
+                                enduring the isolation of the harsh climate.
+                            </p>
+                            <img src="img/kharnak-gonpa2.png" class="pop-img" alt="">
+                            <br>
+                            <p>Dhad Gompa is currently administered by Hemis Monastery, which appoints two lamas to 
+                                oversee the monastery. These lamas serve for a year, with the selection made through a 
+                                lottery system from the Lama school at Hemis. While the Gompa is now part of Hemis' 
+                                administrative structure, it continues to be a spiritual center for the Kharnak community, 
+                                who maintain a strong religious connection to it.</p>
+                        <!-- Close button at the bottom -->
+                        <button class="close-btn-bottom" onclick="togglePopup1()">Close</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- <div class="grid-box">
+                <div class="icon-title">
+                    <img src="./img/gonLogo.png" alt="">
+                    <h2>Dhat GONPA</h2>
+                </div>
+                <p> <span class="highlight">Design Text </span> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur obcaecati incidunt pariatur in doloribus repellat hic nesciunt accusamus tempora. Facere.</p>
+            </div> -->
+
+
+
+
+
+
+
+            <div class="grid-box">
+                <div class="icon-title">
+                    <img class="img-2" src="./img/2logoHistory.png" alt="">
+                    <h2>མཁར་ནག་ལོ་རྒྱུས་། <br> HISTORY</h2>
+                </div>
+                <p><span class="highlight">Design Text </span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur obcaecati incidunt pariatur in doloribus repellat hic nesciunt accusamus tempora. Facere.
+                    <button class="Read-more " onclick="togglePopup2()">Read More <i class="fa fa-arrow-right"></i></button>
+                </p>
+                <div class="popup" id="popup-2">
+                
+                    <div class="overlay"></div>
+                
+                    <div class="close-btn" onclick="togglePopup2()">&times;</div>
+                    <div class="content">
+                        
+                        <!-- Close button at the top -->           
+                        <h1>HISTORY</h1>
+                        <p>
+                            
+                            <a style="font-size: 16px; color: black;padding:5px 2px; border:solid black;" href="https://forms.gle/ZFF4kCYBNGtbLGnK6" target="_blank" class="review-link">
+                                Upload Info</a> 
+                                <br>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eaque repellat repudiandae neque illo consectetur nemo voluptate ut est ea aperiam quos fuga iusto in illum delectus totam, commodi cum molestias ullam et. Quos doloremque sapiente vero beatae quia! Beatae, natus! Atque et cupiditate eius minima, sit illo impedit quas?</p>
+                        <!-- <img src="img/kharnak-gonpa.png" alt=""> -->
+                        <div class="container-swiper">
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide"><img id="slide-1" src="img/kharnakGonpa1.jpg" alt="old kharnak gonpa"></div>
+                                <div class="swiper-slide"> <img id="slide-2" src="img/kharnakGonpa4.jpg" alt="the mask of ka la bu kyong"></div>
+                                <div class="swiper-slide"> <img id="slide-2" src="img/kharnakGonpa2.jpg" alt="the mask of ka la bu kyong"></div>
+                                <div class="swiper-slide"> <img id="slide-2" src="img/kharnakGonpa5.jpg" alt="the mask of ka la bu kyong"></div>
+                                <div class="swiper-slide"><img id="slide-1" src="img/kharnakGonpa3.jpg" alt="old kharnak gonpa"></div>
+                                
+                                <div class="swiper-slide"> <img id="slide-2" src="img/kharnakGonpa7.jpg" alt="the mask of ka la bu kyong"></div>
+                                <!-- <div class="swiper-slide"><img src="img/alzejar.png" alt=""></div> -->                  
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>                
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                    
+                        </div>
+
+                        <p>hello world</p>
+                        <p>More content... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra urna ac felis tincidunt, ac malesuada sapien maximus. Donec quis erat ut ante luctus tincidunt. Aenean tristique metus sit amet ex elementum, vel scelerisque tortor interdum. Etiam aliquam quam a pharetra fermentum. Fusce tempus hendrerit suscipit. Vestibulum eget sollicitudin urna, sit amet tincidunt magna. Integer hendrerit, purus id fringilla condimentum, ante lacus cursus libero, in iaculis ipsum libero eu nulla. Fusce dapibus sapien non ante tristique, a pretium libero malesuada. Etiam venenatis varius sapien, id auctor orci ultricies nec. Sed volutpat at ante et maximus.</p>
+                        <p>More content... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra urna ac fel
+                        <br>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita corrupti, mollitia ipsa soluta, minus maxime quis quas libero obcaecati neque officia dolores molestias ipsam praesentium aliquid ad doloribus? Qui beatae error quibusdam debitis exercitationem dolor facere, reprehenderit veritatis quaerat aut necessitatibus ipsum cupiditate dolorum assumenda, libero, inventore eius quia placeat excepturi itaque earum! Commodi quaerat, totam earum dolorem nulla perferendis ipsum rerum soluta! Corrupti inventore molestiae voluptate vitae adipisci dolore? Dicta vitae reiciendis ipsa necessitatibus, blanditiis vel tenetur illo dolore eaque sint aliquam ratione quisquam id hic iste et, alias asperiores dignissimos veniam quibusdam placeat, officiis voluptates. Delectus, aliquam culpa?</p>
+                        
+                        <!-- Close button at the bottom -->
+                        <button class="close-btn-bottom" onclick="togglePopup2()">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="grid-wrapper wrapper-2">
+            <div class="grid-box grid-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3LNuy8YKbcM?si=Szo_toW4GKzNm9zE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+               
+            </div>
+            <div class="grid-box grid-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8f_0jlCiQwI?si=-4PQMu15flG0nTKh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+            </div>
+        </div>
+
+        <!-- <div class="grid-wrapper wrapper-2">
+            <div class="grid-video">
+                
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3LNuy8YKbcM?si=Szo_toW4GKzNm9zE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+               
+            </div>
+            <div class=" grid-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8f_0jlCiQwI?si=-4PQMu15flG0nTKh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+            </div>
+        </div> -->
+    </section>
+
+    <!-- timeline nomadism -->
+    <section class="Timeline " id="Timeline">
+        <div class="title">
+            <h3 class="h3-Kharnak">Migration follows climate, geography, and lunar calendar</h3>
+            <h1>Migration Route of the Kharnakpa</h1>
+          </div>
+        <div class="timeline ">           
+            <!-- Dhat - Spring -->
+            <div class="ConTaiNer right-container">
+                <img src="img/yak.png" alt="Dhat (Spring)" class="timeline-img">
+                <div class="Text-Box">
+                    <h2>Dhat <small>(CAPITAL)</small></h2>
+                    <small>29 March – 22 June (Spring)</small>
+                    <p>Average Elevation: 4,250 m<br>Period of Stay: Approx. 2 and half months</p>
+                    <span class="right-container-arrow"></span>
+                </div>
+            </div>
+            <!-- Zara - Summer -->
+            <div class="ConTaiNer left-container">
+                <img src="img/goat.png" alt="Zara" class="timeline-img">
+                <div class="Text-Box">
+                    <h2>Zara</h2>
+                    <small>22 June – 18 July (Summer)</small>
+                    <p>Average Elevation: 4,750 m<br>Period of Stay: Approx. 1 month</p>
+                    <span class="left-container-arrow"></span>
+                </div>
+            </div>       
+            <!-- Pang-Chen - Summer -->
+            <div class="ConTaiNer right-container">
+                <img src="img/sheep.png" alt="Pang-Chen" class="timeline-img">
+                <div class="Text-Box">
+                    <h2>Pang-Chen</h2>
+                    <small>18 July – 30 August (Summer)</small>
+                    <p>Average Elevation: 4,650 m<br>Period of Stay: Approx. 1 and half months</p>
+                    <span class="right-container-arrow"></span>
+                </div>
+            </div>       
+            <!-- Ya-Gang - Autumn -->
+            <div class="ConTaiNer left-container">
+                <img src="img/wolf.png" alt="Ya-Gang" class="timeline-img">
+                <div class="Text-Box">
+                    <h2>Ya-Gang</h2>
+                    <small>30 August – 14 November (Autumn)</small>
+                    <p>Average Elevation: 4,500 m<br>Period of Stay: Approx. 2 and half months</p>
+                    <span class="left-container-arrow"></span>
+                </div>
+            </div>       
+            <!-- Dhat - Winter -->
+            <div class="ConTaiNer right-container">
+                <img src="img/horse.png" alt="Dhat" class="timeline-img">
+                <div class="Text-Box">
+                    <h2>Dhat</h2>
+                    <small>14 November – 15 February (Winter)</small>
+                    <p>Average Elevation: 4,250 m<br>Period of Stay: Approx. 3 and half months</p>
+                    <span class="right-container-arrow"></span>
+                </div>
+            </div>        
+            <!-- Tsamartse - Winter -->
+            <div class="ConTaiNer left-container">
+                <img src="img/snowLeopard.png" alt="Tsamartse" class="timeline-img">
+                <div class="Text-Box">
+                    <h2>Tsamartse</h2>
+                    <small>15 February – 29 March (Winter)</small>
+                    <p>Average Elevation: 4,500 m<br>Period of Stay: Approx. 1 month</p>
+                    <span class="left-container-arrow"></span>
+                </div>
+            </div>       
+            
+        </div>
+    </section>
+
+    <!-- Article and Publication -->
+    <section class="portfolio container" id="Journal">
+        <div class="rect-bg"></div>
+        <div class="title">
+            <h3>KHARNAK</h3>
+            <div class="ctn-title">
+                <h1>Articles & Publications</h1>
+                <h4>Kharnak’s Legacy Through Published Works . . .
+                    <!-- <span class="highlight">GitHub <i class="fa fa-arrow-right"></i></span> -->
+                </h4>
+            </div>
+        </div>
+        <div class="grid-wrapper">
+            <div class="grid-box G-B-Padding">
+                <img src="./img/theHindu.png" alt="">
+                <div class="hover">
+                    <h4 class="Article-head">The Hindu <br> <span class="article-type">article</span> </h4>
+                    <h4>Meet the Kharnak nomads, who brave the harshest terrains to produce pashmina wool</h4>
+                    <a href="https://www.thehindu.com/society/meet-the-kharnak-nomads-who-brave-the-harshest-terrains-to-produce-pashmina-wool/article28293649.ece" class="highlight">Read Story 
+                        <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>      
+            <div class="grid-box G-B-Padding">
+                <img src="./img/deitiesBook.png" alt="">
+                <div class="hover">
+                    <h4 class="Article-head">Ladakh <br> <span class="article-type">Feature Chapter</span> </h4>
+                     <h4>Mountain deities among the nomadic community of Kharnak (eastern-Ladakh)</h4>
+                    <a href="./img/Mountain_deities_among_the_nomadic_commu.pdf" target="_blank"   class="highlight">Read Story 
+                        <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>    
+            <div class="grid-box G-B-Padding">
+                 <img src="./img/newYorkTIme.png" alt="">
+                <div class="hover">
+                    <h4 class="Article-head">The New York Times <br> <span class="article-type">article</span>  </h4>
+                    <h4>Glimpses of Northern India’s Vanishing Nomads</h4>
+                    <a href="https://www.nytimes.com/2022/02/14/travel/kharnak-nomads-ladakh-india.html" class="highlight">Read Story 
+                        <i class="fa fa-arrow-right"></i></a>
+                </div>
+                </div>
+            <div class="grid-box hidden  G-B-Padding">
+                <img src="./img/theSeattleTime.png" alt="">
+                <div class="hover">
+                    <h4 class="Article-head">The Seattle Times <br> <span class="article-type">article</span> </h4>
+                     <h4>Climate Migration: Nomads move to towns in warming Ladakh</h4>
+                    <a href="https://www.seattletimes.com/nation-world/world/climate-migration-nomads-move-to-towns-in-warming-ladakh/" class="highlight">Read Story 
+                        <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>         
+            <div class="grid-box hidden G-B-Padding">
+                <img src="./img/Wealthest.png" alt="">
+                <div class="hover">
+                    <h4 class="Article-head">Rendering Houses in ladakh <br> <span class="article-type">Feature Chapter</span> </h4>
+                     <h4>Once the wealthiest tent in Kharnak <span class="article-type Page-no">(From page 76)</span> </h4>
+                    <a href="./img/HouseOfLadakh.pdf#page=76" target="_blank"   class="highlight">Read Story 
+                        
+                     <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="grid-box hidden G-B-Padding">
+                <img src="./img/alzejar.png" alt="">
+                <div class="hover">
+                    <h4 class="Article-head">Al Jazeera <br> <span class="article-type">article</span> </h4>
+                     <h4>Ladakh herders struggle on the frontier of climate crisis</h4>
+                    <a href="https://www.aljazeera.com/gallery/2023/1/10/photos-ladakh-herders-struggle-on-the-frontier-of-climate-crisis" target="_blank"   class="highlight">Read Story 
+                        <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="grid-box hidden G-B-Padding">
+                <img src="./img/theEconmist.png" alt="">
+                <div class="hover">
+                    <h4 class="Article-head">The Economist <br> <span class="article-type">article</span> </h4>
+                     <h4>Ladakh’s pashmina-goat-rearing nomads are dwindling</h4>
+                    <a href="https://www.economist.com/asia/2021/11/27/ladakhs-pashmina-goat-rearing-nomads-are-dwindling" target="_blank"   class="highlight">Read Story 
+                        <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <button class="see-more">Load More</button>
+    </section>
+
+    <!-- Community -->
+    <section class="testimonials" id="Groups">
+        <div class="container">
+            <div class="title">
+                <h3 class="h3-Kharnak">United in Tradition and Progress</h3>
+                <h1>Our Groups</h1>
+            </div>
+            
+            <div class="grid-wrapper">
+                
+                <div class="grid-box">
+                    <img src="img/junu2.png" class="group-icon" alt="">
+                    
+                    <h4>Kharnak Junu Tsogspa</h4>
+                    <h5>མཁར་ནག་གཞོན་ནུ་ཕན་བདེ་ཚོགས་པ།།</h5>
+                    <p>The youth group empowers local youth through programs focused on personal growth, leadership, education, cultural preservation, and community engagement.</p>
+                    <!-- <h4><a href="#" target="_blank"   class="highlight">
+                        <i class="fa fa-arrow-right"></i></a>
+                    </h4> -->
+                    <button class="Read-more highlight" onclick="togglePopup3()"> <i class="fa fa-arrow-right"></i></button>
+                    <div class="popup" id="popup-3">
+                
+                        <div class="overlay"></div>
+                    
+                        <div class="close-btn" onclick="togglePopup3()">&times;</div>
+                        <div class="content">
+                            
+                            <!-- Close button at the top -->           
+                            <h1>Kharnak Junu Phanday Tsogspa</h1>
+                            <img src="img/kjt1.jpg" class="pop-img" style="border-radius: 0px; border: none;" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto atque debitis sit magnam suscipit veniam labore. Distinctio incidunt eius rem, voluptatum qui dolorum aliquam fugiat ab laborum veniam corporis doloremque nam accusamus, tempore magnam sit dolor ipsum perferendis accusantium neque molestias sint dolores. Enim autem, voluptatibus earum dolorem a eligendi.</p>
+                            <img src="img/kjp2.jpg" class="pop-img" style="border-radius: 0px; border: none;" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa deleniti quasi necessitatibus at atque quia dicta corrupti vero consequatur rem sunt provident cum, fugiat placeat esse repellat reprehenderit adipisci qui asperiores unde cumque aspernatur exercitationem. Magnam harum, est suscipit aliquid iure qui veritatis excepturi mollitia laudantium, at odit fugit earum.</p>
+                            <!-- Close button at the bottom -->
+                            <button class="close-btn-bottom" onclick="togglePopup3()">Close</button>
+                        </div>
+                    </div>    
+                    <p>migmad dholo <br> President</p>
+                </div>
+
+                <div class="grid-box">
+                    <img src="img/drukJabro.png" class="group-icon" alt="">
+                    
+                    <h4>Druk Jabdro Tsogspa </h4>
+                    <h5>མཁར་ནག་གཞོན་ནུ་ཕན་བདེ་ཚོགས་པ།།</h5>                  
+                    <p>Based in  <b>Kharnakling</b>, the group preserves Kharnak's culture, traditions, music, dance, and customs through events and activities for future generations.</p>
+                    <!-- <h4><a href="html/junuPhandeyTsogspa.html" target="_blank"   class="highlight">
+                        <i class="fa fa-arrow-right"></i></a>
+                    </h4>                       -->
+
+                    <button class="Read-more highlight" onclick="togglePopup4()"> <i class="fa fa-arrow-right"></i></button>
+                    <div class="popup" id="popup-4">
+                
+                        <div class="overlay"></div>
+                    
+                        <div class="close-btn" onclick="togglePopup4()">&times;</div>
+                        <div class="content">                         
+                            <!-- Close button at the top -->   
+                            <h1>Druk Jabdro Tsogspa Kharnakling</h1> 
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores distinctio similique tempora iusto eius neque impedit, beatae facilis ipsa quod, modi eum harum, tenetur quisquam ipsam eaque temporibus sapiente quae.</p>
+                            <img src="img/drukpa3.jpg" class="pop-img" style="border-radius: 0px; border: none;" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa deleniti quasi necessitatibus at atque quia dicta corrupti vero consequatur rem sunt provident cum, fugiat placeat esse repellat reprehenderit adipisci qui asperiores unde cumque aspernatur exercitationem. Magnam harum, est suscipit aliquid iure qui veritatis excepturi mollitia laudantium, at odit fugit earum.</p>       
+                            
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, animi. Fugit modi qui accusamus, optio consectetur quas nostrum nulla nemo quia atque enim placeat molestias ad est odit facere saepe temporibus harum sunt velit et. Recusandae, molestiae. Cumque tempora, cupiditate fugiat veniam enim porro, nostrum laborum, excepturi minus dolorem consectetur?</p>
+                            <img src="img/druk1.heic" class="pop-img" style="border-radius: 0px; border: none;" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto atque debitis sit magnam suscipit veniam labore. Distinctio incidunt eius rem, voluptatum qui dolorum aliquam fugiat ab laborum veniam corporis doloremque nam accusamus, tempore magnam sit dolor ipsum perferendis accusantium neque molestias sint dolores. Enim autem, voluptatibus earum dolorem a eligendi.</p>
+                            <img src="img/drukpa2.jpg" class="pop-img" style="border-radius: 0px; border: none;" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa deleniti quasi necessitatibus at atque quia dicta corrupti vero consequatur rem sunt provident cum, fugiat placeat esse repellat reprehenderit adipisci qui asperiores unde cumque aspernatur exercitationem. Magnam harum, est suscipit aliquid iure qui veritatis excepturi mollitia laudantium, at odit fugit earum.</p>
+                            
+                            <!-- Close button at the bottom -->
+                            <button class="close-btn-bottom" onclick="togglePopup4()">Close</button>
+                        </div>
+                    </div>
+
+
+                    <p>migmad dholo <br> President</p>   
+                </div>
+
+
+
+                <div class="grid-box">
+                    <img src="img/yargais.png" class="group-icon" alt="">
+                    <h4>Kharnak Yargais Tsogspa</h4>
+                    <h5>  མཁར་ནག་ཡར་རྒྱས་ཚོགས་པ།།</h5>             
+                    <p>
+                        The group works towards Kharnak’s development, focusing on education, infrastructure, and social welfare, while promoting unity for a prosperous future.</p>
+                    <!-- <h4><a href="#" target="_blank"   class="highlight">
+                        <i class="fa fa-arrow-right"></i></a>
+                    </h4>      
+                    
+                    -->
+
+                    
+                    <button class="Read-more highlight" onclick="togglePopup5()"> <i class="fa fa-arrow-right"></i></button>
+
+
+
+                    <div class="popup" id="popup-5">
+                
+                        <div class="overlay"></div>
+                    
+                        <div class="close-btn" onclick="togglePopup5()">&times;</div>
+                        <div class="content">
+                            
+                            <!-- Close button at the top -->           
+                            <h1>Kharnak Yargais Tsogspa</h1>
+                            <img src="img/kjt1.jpg" class="pop-img" style="border-radius: 0px; border: none;" alt="">
+                            <img src="img/kjp2.jpg" class="pop-img" style="border-radius: 0px; border: none;" alt="">
+                            
+                            <!-- Close button at the bottom -->
+                            <button class="close-btn-bottom" onclick="togglePopup5()">Close</button>
+                        </div>
+                    </div>
+
+                    
+
+
+                    <p>migmad dholo <br> President</p>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Contact -->
+    <section class="contact" id="Contact">
+        <div class="container">
+            <h3>Let's Connect</h3>
+            <h3 class="h3-size"><a class="mail-to" href="mailto:kharnakchangthang@gmail.com?subject=Contact%20from%20Website"><i class="fa fa-envelope-o"></i> kharnakchangthang@</a></h3>         
+            <h1> Whether You're Visiting or Researching</h1>
+                    
+            <!-- Form for Tourists and Researchers -->
+            <div class="GrievanceForm">
+                <form action="mailto:kharnakchangthang@gmail.com?subject=Visiting/Researching" method="post" enctype="text/plain">
+                    
+                        <!-- Your Name (required) -->
+                        <label for="NAME" class="label1">Name :</label>
+                        <input type="text" class="label1" id="NAME" name="name" required placeholder="Your name">
+                        <!-- Your Email (required) -->
+                        <label for="EMAIL" class="label1">Email :</label>
+                        <input type="email" class="label1" id="EMAIL" name="email" required placeholder="Your email address">
+                        <!-- Message -->
+                        <label for="DESCRIPTION" class="label1">Message :</label>
+                        <textarea id="DESCRIPTION" name="message" class="label1" rows="1" placeholder="Write your message here..."></textarea>
+                        <!-- Category -->
+                        <label for="category" class="label1">Choose your category:</label>
+                        <select id="category" name="category" class="label1" required>
+                            <option value="" disabled selected>Not Selected</option>
+                            <option value="tourist">Tourist Inquiry</option>
+                            <option value="researcher">Researcher Inquiry</option>
+                        </select>                  
+
+                    <div class="button-container">
+                        <input type="submit" id="submit" value="Send Message">
+                    </div>
+                </form>
+            </div>
+    
+            <div class="brand">
+                <a href="#Home"><img src="./img/logo1-removebg-preview.png" alt="" class="logo"></a>
+            </div>
+
+            <div class="Map-Learning">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6153.5638456532!2d77.50704346080455!3d33.51008585562052!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390241005af7755d%3A0xe9ce917141948d87!2sDhat-%20kharnak!5e1!3m2!1sen!2sin!4v1736305341031!5m2!1sen!2sin" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>                
+    </section>
+
+
+    <div class="copyright ">
+        <p>© 2025  kharnak | kharnak Junu Tsogspa | <a href="https://www.instagram.com/jigma__t/">SynthCipher</a>        </p>
+    </div>
+    
+
+    <div class="regular closable" id="hellobar-bar">  
+        <div class="hb-headline-wrapper">
+            <!-- <p>We value your feedback! <span>Please <a href="https://forms.gle/ZFF4kCYBNGtbLGnK6" target="_blank" class="review-link"> -->
+            <p>Share Ur insights and feedback!&nbsp;    <span><a href="https://forms.gle/ZFF4kCYBNGtbLGnK6" target="_blank" class="review-link">
+            click    here</a></span></p>
+        </div>
+        <div class="hb-close-wrapper">
+            <a href="javascript:void(0);" class="icon-close" onclick="$('#hellobar-bar').fadeOut()">&#10006;</a>
+        </div>
+    </div>
+
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/app.js"></script>
+ 
+
+</body>
+</html>
