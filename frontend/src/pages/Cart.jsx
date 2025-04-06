@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ShopContext } from "../context/shopContext";
+import { ShopContext } from "../context/shopContext.jsx";
 import { FaCartShopping } from "react-icons/fa6";
 import Title from "../components/Title";
 import { assets } from "../assets/assets";
