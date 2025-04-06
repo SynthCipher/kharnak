@@ -1,19 +1,24 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ShopContext } from "../context/shopContext";
+import { ShopContext } from "../context/ShopContext";
 
 const ProductItem = ({ _id, image, name, price }) => {
   const { currency } = useContext(ShopContext);
   return (
     <Link className="cursor-pointer text-gray-700" to={`/product/${_id}`}>
       {" "}
-      <div className="overflow-hidden" onClick={()=>setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth', // Optional: Adds smooth scrolling
-      });
-    }, 100)}>
+      <div
+        className="overflow-hidden"
+        onClick={() =>
+          setTimeout(() => {
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth", // Optional: Adds smooth scrolling
+            });
+          }, 100)
+        }
+      >
         {/* <p>{id}</p>
         <p>{name}</p>
         <p>{price}</p> */}

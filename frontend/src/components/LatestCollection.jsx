@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import Title from "./Title.jsx";
 import ProductItem from "./ProductItem.jsx";
-import { ShopContext } from "../context/shopContext.jsx";
+import { ShopContext } from "../context/ShopContext.jsx";
 
 const LatestCollection = () => {
   const { products } = useContext(ShopContext);
@@ -13,16 +13,16 @@ const LatestCollection = () => {
 
   return (
     <div className="my-10">
-      <div className="text-center py-8 text-3xl">
+      <div className="py-8 text-center text-3xl">
         <Title text1={"LATEST"} text2={"COLLECTIONS"} />
-        <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600 ">
+        <p className="m-auto w-3/4 text-xs text-gray-600 sm:text-sm md:text-base">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas
           doloribus et provident! Dolorum rerum vitae quasi, id ipsum nesciunt
         </p>
       </div>
 
       {/* Rendering Produnt */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 pay-y-6">
+      <div className="pay-y-6 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {latestProduct.map((item, index) => (
           <ProductItem
             key={index}

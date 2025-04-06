@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ShopContext } from "../context/shopContext";
+import { ShopContext } from "../context/ShopContext";
 import Title from "./Title";
 import ProductItem from "./ProductItem";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 const RelatedProducts = ({ category, subCategory, _id }) => {
   const { products } = useContext(ShopContext);
   const [related, setRelated] = useState([]);
-
 
   // Fisher-Yates shuffle function to shuffle the products array
   const shuffleArray = (array) => {
@@ -54,7 +53,7 @@ const RelatedProducts = ({ category, subCategory, _id }) => {
       // Set the related products (randomly selected)
       setRelated(randomProducts);
     }
-  }, [products, category, subCategory,_id]);
+  }, [products, category, subCategory, _id]);
 
   return (
     <div className="my-24">

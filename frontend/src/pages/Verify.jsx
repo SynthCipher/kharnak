@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ShopContext } from "../context/shopContext.jsx";
+import { ShopContext } from "../context/ShopContext.jsx";
 import { useSearchParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";

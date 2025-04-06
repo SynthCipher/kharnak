@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ShopContext } from "../context/shopContext.jsx";
+import { ShopContext } from "../context/ShopContext.jsx";
 import { FaCartShopping } from "react-icons/fa6";
 import Title from "../components/Title";
 import { assets } from "../assets/assets";
@@ -16,7 +16,7 @@ const Cart = () => {
     getCartCount,
     updateQuantity,
     token,
-    getUserCart
+    getUserCart,
   } = useContext(ShopContext);
   const [cartData, setCartData] = useState([]);
   const [cartLoaded, setCartLoaded] = useState(false);
@@ -36,7 +36,7 @@ const Cart = () => {
           setIsLoading(false);
         }
       };
-      
+
       loadCartData();
     } else {
       setIsLoading(false);
@@ -84,7 +84,7 @@ const Cart = () => {
   const handleQuantityChange = (productId, size, value) => {
     // Parse the input value
     const quantity = parseInt(value);
-    
+
     // Only update if value is a valid number and greater than zero
     if (!isNaN(quantity) && quantity > 0) {
       updateQuantity(productId, size, quantity);
@@ -94,7 +94,7 @@ const Cart = () => {
   // Show loading state only during initial load
   if (isLoading && !cartLoaded) {
     return (
-      <div className="flex justify-center items-center min-h-[400px]">
+      <div className="flex min-h-[400px] items-center justify-center">
         <p className="text-gray-500">Loading your cart...</p>
       </div>
     );
@@ -147,7 +147,9 @@ const Cart = () => {
                 </div>
               </div>
               <input
-                onChange={(e) => handleQuantityChange(item._id, item.size, e.target.value)}
+                onChange={(e) =>
+                  handleQuantityChange(item._id, item.size, e.target.value)
+                }
                 className="max-w-10 border border-gray-300 px-1 py-1 sm:max-w-20 sm:px-2"
                 type="number"
                 min={1}
@@ -178,7 +180,7 @@ const Cart = () => {
       </div>
     </div>
   ) : (
-    <div className="flex flex-col items-center justify-center gap-4 min-h-[400px]">
+    <div className="flex min-h-[400px] flex-col items-center justify-center gap-4">
       <p className="mt-30 text-center text-lg text-gray-500">
         No products in cart
       </p>
@@ -187,7 +189,7 @@ const Cart = () => {
           navigate("/collection");
           scrollTo(0, 0);
         }}
-        className="flex flex-col items-center justify-center gap-4 cursor-pointer"
+        className="flex cursor-pointer flex-col items-center justify-center gap-4"
       >
         <FaCartShopping className="text-5xl text-gray-500" />
         <p>SHOP NOW</p>
@@ -197,7 +199,6 @@ const Cart = () => {
 };
 
 export default Cart;
-
 
 // import React, { useContext, useEffect, useState } from "react";
 // import { ShopContext } from "../context/shopContext";
@@ -348,6 +349,3 @@ export default Cart;
 // };
 
 // export default Cart;
-
-
-

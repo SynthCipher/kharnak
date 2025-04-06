@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { ShopContext } from "../context/shopContext.jsx";
+import { ShopContext } from "../context/ShopContext.jsx";
 import { assets } from "../assets/assets";
 import RelatedProducts from "../components/RelatedProducts.jsx";
 

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import Title from "../components/Title.jsx";
-import { ShopContext } from "../context/shopContext.jsx";
+import { ShopContext } from "../context/ShopContext.jsx";
 import CartTotal from "../components/CartTotal.jsx";
 import { assets } from "../assets/assets.js";
 import axios from "axios";
@@ -150,7 +150,7 @@ const PlaceOrder = () => {
 
             if (data.success) {
               // If payment is successful, redirect to Stripe checkout session URL
-              const { session_url } = data; 
+              const { session_url } = data;
               window.location.replace(session_url);
               // navigate('/orders')
             } else {
