@@ -4,6 +4,7 @@ import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
 import RelatedProducts from '../components/RelatedProducts';
 import { toast } from 'react-toastify';
+import SEO from '../components/SEO';
 import { IoCheckmarkCircle, IoCloseCircle } from 'react-icons/io5';
 import { FaBrain, FaHammer } from 'react-icons/fa';
 
@@ -30,6 +31,11 @@ const Product = () => {
 
     return productData ? (
         <div className='border-t-2 pt-10 sm:pt-20 mt-15 transition-opacity ease-in duration-500 opacity-100 min-h-screen px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] bg-white'>
+            <SEO
+                title={productData.name}
+                description={productData.description.substring(0, 160)}
+                keywords={`${productData.name}, ${productData.category}, Ladakh product, handcrafted, Pashmina, Kharnak`}
+            />
             {/* ----------- Product Data -------------- */}
             <div className='flex gap-12 sm:gap-12 flex-col sm:flex-row'>
                 {/* ---------- Product Images ------------- */}

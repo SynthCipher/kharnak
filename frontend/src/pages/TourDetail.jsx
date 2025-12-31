@@ -5,6 +5,7 @@ import { ShopContext } from '../context/ShopContext';
 import { toast } from 'react-toastify';
 import { IoCalendarOutline, IoPersonOutline, IoLocationOutline, IoCheckmarkCircleOutline, IoArrowBackOutline, IoWalletOutline, IoFlashOutline } from 'react-icons/io5';
 import BookTourModal from '../components/BookTourModal';
+import SEO from '../components/SEO';
 
 const TourDetail = () => {
     const { id } = useParams();
@@ -157,6 +158,11 @@ const TourDetail = () => {
 
     return (
         <div className="min-h-screen bg-[#fcf9f2] pt-28 pb-20 px-6">
+            <SEO
+                title={tour.name}
+                description={tour.description.substring(0, 160)}
+                keywords={`${tour.name}, ${tour.type}, Ladakh expedition, Leh tour, winter tourism, Kharnak trekking`}
+            />
             <div className="max-w-6xl mx-auto">
                 <button
                     onClick={() => navigate('/tourism')}

@@ -27,6 +27,14 @@ const BookStayModal = () => {
 
     // Handle Persistence & Auto-open
     useEffect(() => {
+        const handleOpen = (e) => {
+            setIsOpen(true);
+            if (e.detail && e.detail.bookingType) {
+                setFormData(prev => ({ ...prev, bookingType: e.detail.bookingType }));
+            }
+        };
+        window.addEventListener('open-book-stay-modal', handleOpen);
+
         // Load saved data if exists
         const savedData = localStorage.getItem('pending_stay_booking_data');
         if (savedData) {
@@ -43,6 +51,8 @@ const BookStayModal = () => {
             setIsOpen(true);
             localStorage.removeItem('pending_stay_booking_modal_open');
         }
+
+        return () => window.removeEventListener('open-book-stay-modal', handleOpen);
     }, [token]);
 
     const handleChange = (e) => {

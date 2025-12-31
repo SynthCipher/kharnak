@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { ShopContext } from '../context/ShopContext';
+import SEO from '../components/SEO';
 
 const Archive = () => {
     const [publications, setPublications] = useState([]);
@@ -40,6 +41,11 @@ const Archive = () => {
 
     return (
         <div className="pt-32 pb-20 bg-gray-50 min-h-screen">
+            <SEO
+                title="Archive"
+                description="Explore the digital archive of Kharnak. A collection of articles, publications, and documentaries about Ladakh nomadic culture and heritage."
+                keywords="Kharnak archive, Ladakh history publications, Changpa research papers, nomadic culture documentary"
+            />
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <h3 className="text-gray-400 font-bold tracking-widest uppercase text-sm mb-2">DIGITAL LIBRARY</h3>

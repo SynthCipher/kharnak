@@ -17,6 +17,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 // Import Custom CSS
 import '../css/timeline.css';
+import SEO from '../components/SEO';
 
 const Home = () => {
   const [popup1Open, setPopup1Open] = useState(false);
@@ -72,6 +73,11 @@ const Home = () => {
 
   return (
     <>
+      <SEO
+        title="Home"
+        description="Experience the heart of Ladakh with Kharnak. Curated Leh Ladakh tours, authentic Pashmina, and nomadic Changpa culture. Explore the silent peaks of Kharnak."
+        keywords="Kharnak, Ladakh tour, Leh Ladakh, Changpa nomads, Pashmina products, Ladakh travel, Winter tourism Ladakh, Himalayan tour"
+      />
       {/* Navigation Bar - Handled globally in App.jsx */}
 
       {/* HOME Video */}

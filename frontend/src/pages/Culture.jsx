@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import BookStayModal from '../components/BookStayModal';
 import culture_hero from '../assets/culture_hero.png';
+import SEO from '../components/SEO';
 
 const Culture = () => {
     const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:8081";
@@ -55,6 +55,11 @@ const Culture = () => {
 
     return (
         <div className="min-h-screen bg-[#fcf9f2]">
+            <SEO
+                title="Culture & Stories"
+                description="Explore the rich heritage of Kharnak and the Changpa nomads. Authentic stories, cultural documentaries, and the legacy of the high Himalayas."
+                keywords="Ladakh culture, Changpa history, nomadic stories, Kharnak documentary, Himalayan heritage, Rebo nomad life"
+            />
             {/* Hero Section */}
             <div className="relative h-[70vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
@@ -124,7 +129,6 @@ const Culture = () => {
                     </div>
                 )}
             </div>
-            <BookStayModal />
         </div>
     );
 };

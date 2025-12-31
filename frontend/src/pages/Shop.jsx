@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { IoSearchOutline, IoFilterOutline, IoCartOutline } from 'react-icons/io5';
 import { ShopContext } from '../context/ShopContext';
+import SEO from '../components/SEO';
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
@@ -75,6 +76,11 @@ const Shop = () => {
 
     return (
         <div className="min-h-screen bg-[#fcf9f2] pt-24 pb-20 px-6 mt-10 md:px-16 lg:px-24 xl:px-32">
+            <SEO
+                title="Shop"
+                description="Shop authentic Ladakh products, premium Pashmina shawls, and handcrafted nomadic treasures. Every purchase supports the artisans of Kharnak."
+                keywords="Ladakh products, Pashmina shop, Kharnak crafts, nomadic treasures, Leh gifts, authentic Ladakh pashmina"
+            />
             {/* Header Area */}
             <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
                 <div>

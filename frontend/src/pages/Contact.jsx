@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 import { RiMailSendLine, RiUserLocationLine } from 'react-icons/ri'
+import SEO from '../components/SEO'
 
 const Contact = () => {
     const [contact, setContact] = useState({
@@ -31,6 +32,11 @@ const Contact = () => {
 
     return (
         <div className='bg-gray-50 min-h-screen pt-10 pb-20'>
+            <SEO
+                title="Contact Us"
+                description="Connect with Kharnak. Inquiry about Ladakh tours, research collaborations, or nomadic culture. We'd love to hear from you."
+                keywords="contact Kharnak, Ladakh tour inquiry, Changpa research, Kharnak nomad contact"
+            />
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <h3 className="text-yellow-600 uppercase tracking-widest text-sm font-bold mb-2">Let's Connect</h3>
