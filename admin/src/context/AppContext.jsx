@@ -8,6 +8,9 @@ const AppContextProvider = (props) => {
   const [token, setToken] = useState(
     localStorage.getItem("token") ? localStorage.getItem("token") : ""
   );
+  const [role, setRole] = useState(
+    localStorage.getItem("role") ? localStorage.getItem("role") : "user" // Default to safe role
+  );
   const currency = "₹";
   const navigate = useNavigate();
 
@@ -15,12 +18,18 @@ const AppContextProvider = (props) => {
     localStorage.setItem("token", token);
   }, [token]);
 
+  useEffect(() => {
+    localStorage.setItem("role", role);
+  }, [role]);
+
   const value = {
     backendUrl,
     token,
     setToken,
     navigate,
     currency,
+    role,
+    setRole
   };
   return (
     <AppContext.Provider value={value}>{props.children}</AppContext.Provider>

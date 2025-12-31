@@ -26,6 +26,64 @@ a.active hr {
   }
 }
 
-::-webkit-scrollbar{
-  display: none;
+/* Custom Scrollbar for Modal and other components */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  display: block;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db;
+}
+
+/* Utility to Hide Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+/* Modal Typography Enhancements */
+.modal-content h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e1964;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e1964;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.modal-content img {
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.modal-content .container-swiper {
+  margin: 1.5rem 0;
 }

@@ -1,42 +1,58 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Cart from "./pages/Cart";
-import Collection from "./pages/Collection";
-import Contact from "./pages/Contact";
-import Login from "./pages/Login";
-import Orders from "./pages/Orders";
-import PlaceOrder from "./pages/PlaceOrder";
+import Shop from "./pages/Shop";
 import Product from "./pages/Product";
+import Cart from "./pages/Cart";
+import Tourism from "./pages/Tourism";
+import Culture from "./pages/Culture";
+import PlaceOrder from "./pages/PlaceOrder";
+import Contact from "./pages/Contact";
+import StoryDetail from "./pages/StoryDetail";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "./components/Navbar";
-import MyProfile from "./pages/MyProfile";
-import SearchBar from "./components/SearchBar";
 import Footer from "./components/Footer";
-import { ToastContainer } from "react-toastify";
-import Verify from "./pages/Verify";
+import ScrollToTop from "./components/ScrollToTop";
+import BookStayModal from "./components/BookStayModal";
+
+import GroupDetail from "./pages/GroupDetail";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import Archive from "./pages/Archive";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TourDetail from "./pages/TourDetail";
+
 const App = () => {
-  return (
-    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vh]">
-      <ToastContainer />
-      <Navbar />
-      <SearchBar />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/cart" element={<Cart />}></Route>
-        <Route path="/collection" element={<Collection />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/orders" element={<Orders />}></Route>
-        <Route path="/place-order" element={<PlaceOrder />}></Route>
-        <Route path="/product/:productId" element={<Product />}></Route>
-        <Route path="/profile" element={<MyProfile />}></Route>
-        <Route path="/verify" element={<Verify />}></Route>
-      </Routes>
-      <Footer />
-    </div>
-  );
+    const location = useLocation();
+
+    return (
+        <div className="flex flex-col min-h-screen ">
+            <ScrollToTop />
+            <ToastContainer />
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/shop" element={<Shop />} />
+                <Route path="/product/:productId" element={<Product />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/tourism" element={<Tourism />} />
+                <Route path="/culture" element={<Culture />} />
+                <Route path="/culture/:id" element={<StoryDetail />} />
+                <Route path="/place-order" element={<PlaceOrder />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/groups/:id" element={<GroupDetail />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/archive" element={<Archive />} />
+                <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/tour/:id" element={<TourDetail />} />
+            </Routes>
+            <Footer />
+            {!location.pathname.startsWith('/profile') && !location.pathname.startsWith('/tour/') && <BookStayModal />}
+        </div >
+    );
 };
 
 export default App;

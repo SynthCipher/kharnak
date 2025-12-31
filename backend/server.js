@@ -7,6 +7,11 @@ import userRouter from "./routes/userRoute.js";
 import productRouter from "./routes/productRoute.js";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import bookingRouter from "./routes/bookingRoute.js";
+import storyRouter from "./routes/storyRoute.js";
+import contactRouter from "./routes/contactRoute.js";
+import publicationRouter from "./routes/publicationRoute.js";
+import tourRouter from "./routes/tourRoute.js";
 
 // APP CONFIG
 const app = express();
@@ -15,52 +20,40 @@ connectDB();
 connectCloudinary();
 // MIDDLE WARE
 app.use(express.json());
-app.use(cors());
+const allowedOrigins = process.env.ALLOWED_ORIGINS
+  ? process.env.ALLOWED_ORIGINS.split(',')
+  : ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175'];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      var msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  credentials: true
+}));
 
 // API END POINT
 app.use("/api/user", userRouter);
 app.use("/api/product", productRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
+app.use("/api/booking", bookingRouter);
+app.use("/api/story", storyRouter);
+app.use("/api/contact", contactRouter);
+app.use("/api/publication", publicationRouter);
+app.use("/api/tour", tourRouter);
 
 app.get("/", (req, res) => {
   res.send("hello Server is Working");
-  
 });
 
+app.listen(port, () => {
+  console.log(`Server Started on http://localhost:${port}`)
+})
 
 
-// Set up a webhook endpoint in your backend
-app.post('/webhook', express.raw({type: 'application/json'}), async (req, res) => {
-  const sig = req.headers['stripe-signature'];
-  let event;
-
-  try {
-    // Verify the event came from Stripe
-    event = stripe.webhooks.constructEvent(req.body, sig, webhookSecret);
-  } catch (err) {
-    return res.status(400).send(`Webhook Error: ${err.message}`);
-  }
-
-  // Handle the event
-  if (event.type === 'payment_intent.succeeded') {
-    const paymentIntent = event.data.object;
-    // Update your order in the database
-    await orderModel.findOneAndUpdate(
-      { paymentIntentId: paymentIntent.id },
-      { payment: true }
-    );
-    // Clear the user's cart
-    const order = await orderModel.findOne({ paymentIntentId: paymentIntent.id });
-    if (order) {
-      await userModel.findByIdAndUpdate(order.userId, { cartData: {} });
-    }
-  }
-
-  res.status(200).send();
-});
-
-
-app.listen(port, (req, res) => {
-  console.log("app is litenign to port : ", port);
-});

@@ -1,3 +1,14 @@
 node_modules
-
 *.env
+*.log
+.DS_Store
+dist
+dist-ssr
+build
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
