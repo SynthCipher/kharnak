@@ -26,7 +26,7 @@ const allowedOrigins = process.env.ALLOWED_ORIGINS
     'http://localhost:5174',
     'http://localhost:5175',
     'https://kharnak.vercel.app',
-    'https://kharnak.in',
+    'https://kharnak.in', 'https://www.kharnak.in',
     'https://kharnak-nfjr.vercel.app'];
 
 app.use(cors({
